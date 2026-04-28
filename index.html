@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harita SEO Planlayıcı</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Google Harita SEO Planlayıcı</h1>
+        <p>
+          Yerel işletmen için güvenli (white-hat) optimizasyon adımlarını hızlıca
+          planla.
+        </p>
+      </header>
+
+      <section class="card grid-2">
+        <label>
+          İşletme adı
+          <input id="businessName" type="text" placeholder="Örn: Mavi Diş Kliniği" />
+        </label>
+
+        <label>
+          Şehir / İlçe
+          <input id="location" type="text" placeholder="Örn: İstanbul / Kadıköy" />
+        </label>
+
+        <label>
+          Ana hizmet
+          <input id="service" type="text" placeholder="Örn: İmplant" />
+        </label>
+
+        <label>
+          Haftalık içerik hedefi (adet)
+          <input id="weeklyTarget" type="number" min="1" max="14" value="3" />
+        </label>
+      </section>
+
+      <section class="card">
+        <h2>Durum Kontrolü</h2>
+        <div class="checklist" id="checklist">
+          <label><input type="checkbox" data-weight="12" /> Doğru ana kategori seçildi</label>
+          <label><input type="checkbox" data-weight="12" /> Açıklama alanı optimize edildi</label>
+          <label><input type="checkbox" data-weight="15" /> Son 30 günde en az 10 gerçek yorum alındı</label>
+          <label><input type="checkbox" data-weight="10" /> Tüm yorumlara 24 saat içinde yanıt veriliyor</label>
+          <label><input type="checkbox" data-weight="10" /> Fotoğraf/video haftalık güncelleniyor</label>
+          <label><input type="checkbox" data-weight="8" /> NAP bilgisi web site ile tutarlı</label>
+          <label><input type="checkbox" data-weight="8" /> Hizmet sayfalarında LocalBusiness schema var</label>
+          <label><input type="checkbox" data-weight="10" /> Haftalık GBP postları yayınlanıyor</label>
+          <label><input type="checkbox" data-weight="15" /> En az 5 yerel dizinde citation tutarlı</label>
+        </div>
+      </section>
+
+      <section class="card actions">
+        <button id="calculateBtn">Skor ve Plan Oluştur</button>
+        <button id="resetBtn" class="ghost">Sıfırla</button>
+      </section>
+
+      <section class="card" id="resultCard" hidden>
+        <h2>Sonuç</h2>
+        <p id="scoreText"></p>
+        <h3>Öncelikli Haftalık Aksiyonlar</h3>
+        <ul id="planList"></ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
